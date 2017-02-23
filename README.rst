@@ -91,6 +91,12 @@ Config Settings
     eg. alberta_dataset.json
     "preset": "repeating_text",
     "form_blanks": 3
+    
+    For importint or exportint data of other IDDP machines with ckanapi 
+    load, set 'ckan.ab_scheming.deployment = true'. After finsih import 
+    or export, set it to false. Also this flag will control package_list
+    api to show public only if false, or public and private datasets
+    if true. So ckanapi dump will be controlled by this flag.
 
 ------------------------
 Development Installation
