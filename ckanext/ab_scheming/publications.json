@@ -543,7 +543,9 @@
       "label": "Contact Name",
       "form_placeholder": "eg. personal, role name, branch",
       "help_text": "The organizational contact for users of the Open Government Portal to obtain further information or provide feedback about an information resource or its metadata.",
-      "help_inline": false
+      "help_inline": false,
+      "required": true ,
+      "validators": "ab_ps_scheming_required"
     },
     {
       "field_name": "email",
@@ -551,7 +553,9 @@
       "form_placeholder": "opendata@gov.ab.ca",
       "display_property": "dc:creator",
       "display_snippet": "email.html",
-      "display_email_name_field": "author"
+      "display_email_name_field": "author",
+      "required": true ,
+      "validators": "ab_ps_scheming_required"
     },
     {
       "field_name": "contactother",

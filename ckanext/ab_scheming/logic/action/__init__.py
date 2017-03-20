@@ -49,6 +49,11 @@ CREATOR_MATCH = {
 
 def change_pkg_dict_for_import_deployment(data_dict, mode):
     data_dict['url'] = ''
+    if mode == 'create':
+        data_dict['_ckan_phase'] = ''
+    elif mode == 'update' and '_ckan_phase' in data_dict:
+        del data_dict['_ckan_phase']
+
     if 'topic' in data_dict:
         if not data_dict['topic']: 
             data_dict['topics'] = ['environment']
