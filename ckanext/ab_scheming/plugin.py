@@ -23,10 +23,13 @@ class Ab_SchemingPlugin(plugins.SingletonPlugin):
         return facets_dict
         
     def before_index(self, pkg_dict):
+        ### below 2 if blocks not work for solr 9.6 but 9.3
+        """
         if 'audience' in pkg_dict:
             pkg_dict['audience'] = json.loads(pkg_dict['audience'])
         if 'topic' in pkg_dict:
             pkg_dict['topic'] = json.loads(pkg_dict['topic'])
+        """
         if 'pubtype' in pkg_dict:
             pkg_dict['pubtype'] = json.loads(pkg_dict['pubtype'])
             
